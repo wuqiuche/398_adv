@@ -1,0 +1,26 @@
+\documentclass[a4paper,10pt,nil]{article}
+\usepackage{setspace}
+\usepackage{enumerate}
+% Additional Options
+\begin{document}
+ \begin{spacing}{1.5}
+
+\textbf{Q1:} Suppose f(x) is continuous on the interval [0,1], and $f(0)=f(1)$, try to prove:
+\begin{enumerate}[(1)]
+\item there exists $x \in$ [0,1], such that $f(x)=f(x+\frac{1}{2})$;
+\item for $\forall n\in Z^+$, there exists $x \in$ [0,1], such that $f(x)=f(x+\frac{1}{n})$
+\end{enumerate}
+
+\textbf{Solution:}
+\begin{enumerate}[(1)] 
+\item Let $g(x)=f(x)-f(x+\frac{1}{2})$,\\ then we have $g(0)=f(0)-f(\frac{1}{2}), g(\frac{1}{2})=f(\frac{1}{2})-f(1)$.\\ Then, $g(0)+g(\frac{1}{2})=f(0)-f(1)=0$\\
+So, due to the intermediate value theorem, there must exist a number $x \in$ [0,1], such that $g(x)=\frac{g(0)+g(\frac{1}{2})}{2}=0$. \\
+So, it is proved.
+\item Let $h(x)=f(x)-f(x+\frac{1}{n})$,\\ then $h(0)=f(0)-f(\frac{1}{n}),h(\frac{1}{n})=f(\frac{1}{n})-f(\frac{2}{n}),...,h(\frac{n-1}{n})=f(\frac{n-1}{n})-f(1).$\\
+Add these equations, we have $\sum_{i=0}^{n-1}h(\frac{i}{n})=f(0)-f(1)=0.$
+Due to the intermediate value theorem, there must exist a number $x \in$ [0,1], such that $h(x)=\frac{1}{n}\sum_{i=0}^{n-1}h(\frac{i}{n})=0$ \\
+So it is proved.
+\end{enumerate}
+
+\end{spacing}
+\end{document}
